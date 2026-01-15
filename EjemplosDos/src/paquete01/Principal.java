@@ -6,9 +6,11 @@
 package paquete01;
 
 import paquete02.DatoPersonal;
+import paquete02.DatoTrabajo;
 import paquete03.DatosUbicacion;
 import paquete04.DatoAcademico;
 import paquete05.DatoFinal;
+import paquete06.informe;
 
 /**
  *
@@ -20,26 +22,28 @@ public class Principal {
         String nombre;
         String ciudad;
         String apellidoRetornado;
-        
+        String nombreEmpresa;
+        String direccionEmpresa;
+
         double[] misNotas;
         double promedio;
-        
+
         nombre = DatoPersonal.obtenerNombre();
         apellidoRetornado = DatoPersonal.obtenerApellido();
         ciudad = DatosUbicacion.obtenerCiudad();
         misNotas = DatoAcademico.obtenerNotas(4);
         promedio = DatoFinal.obtenerPromedio(misNotas);
-        
-        
-        System.out.printf("Los datos ingresados son:\n"
-                + "Nombre: %s\n"
-                + "Apellido: %s\n"
-                + "Ciudad: %s\n"
-                + "Promedio: %.2f\n",
-                nombre,
-                apellidoRetornado,
-                ciudad,
-                promedio);
+        nombreEmpresa = DatoTrabajo.obtenerNombreEmpresa();
+        direccionEmpresa = DatoTrabajo.obtenerDireccionEmpresa();
+        informe.imprimir(nombre, apellidoRetornado, ciudad, nombreEmpresa,
+        direccionEmpresa, misNotas, promedio);
+
     }
-    
+
 }
+/*
+Se requiere desarrollar un programa que permita ingresar datos personales 
+(nombre y apellido), datos de ubicación (ciudad) y datos académicos (notas), 
+procesar dicha información mediante el uso de paquetes de el mismo main 
+y mostrar un resumen final que incluya el promedio académico del estudiante.
+*/

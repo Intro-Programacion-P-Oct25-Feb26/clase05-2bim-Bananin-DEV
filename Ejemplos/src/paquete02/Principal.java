@@ -13,7 +13,7 @@ public class Principal {
         int valorA = Operador.obtenerNumero();
         int valorB = Operador.obtenerNumero();
         int suma = Operador.obtenerSuma(valorA, valorB);
-        Operador.imprimir(valorA, valorB, suma);
+        Operador.imprimir(valorA, valorB, suma); // manera mas limpia usando clase operador
         System.out.printf("La suma de %d + %d es igual a: %d\n",
                 valorA,
                 valorB,

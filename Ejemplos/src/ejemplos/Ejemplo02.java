@@ -6,6 +6,7 @@
 package ejemplos;
 
 import java.security.SecureRandom;
+import java.util.Scanner;
 // import java.security.*;
 
 /**
@@ -16,9 +17,14 @@ public class Ejemplo02 {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        int valorA = obtenerNumero(); // 3
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese limite");
+        int contador = entrada.nextInt();
+        int valorA = obtenerNumero(contador); // 3
         int valorB = obtenerNumero(); // 2
         int suma = obtnerSuma(valorA, valorB);
+        
+     
         System.out.printf("La suma de %d + %d es igual a: %d\n", 
                 valorA,
                 valorB,
